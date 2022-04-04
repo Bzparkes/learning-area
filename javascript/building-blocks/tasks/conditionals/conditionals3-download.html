@@ -27,13 +27,36 @@
   </body>
   <script>
     let response;
-    let score = 75;
-    let machineActive = false;
+    let score = 41;
+    let machineActive = true;
 
     if(machineActive) {
       // Add your code here
     } else {
       response = 'The machine is turned off. Turn it on to process your score.';
+    }
+
+    switch(machineActive === true) {
+      case (score < 0 || score > 100):
+        response = 'Thats is not possible, an error has occurred';
+        break;
+      case (score <= 19):
+        response = 'Abysmal score. Try again';
+        break;
+      case (score <= 39):
+        response = 'You know some things but it\'s still a rubbish score.';
+        break;
+      case (score <= 69):
+        response = 'Not bad, you did a reasonable job.';
+        break;
+      case (score <= 89):
+        response = 'Great score!';
+        break;
+      case (score <= 100): 
+        response = 'Amazing! Top points!';
+        break;
+      default:
+        reponse = '';
     }
 
     // Don't edit the code below here!
