@@ -24,11 +24,17 @@
   
   
   <script>
-    let season = 'summer';
+    let season = 'spring';
     let response;
 
     // Add your code here
-
+    if (season === 'summer') {
+ response = 'What a lovely summer day!';
+} else if(season === 'winter') {
+ response = "It's so cold!";
+} else {
+ response = "I don't know what season it is!";
+}
     // Don't edit the code below here!
 
     const section = document.querySelector('section');

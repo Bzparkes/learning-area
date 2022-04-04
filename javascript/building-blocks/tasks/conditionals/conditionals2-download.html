@@ -25,11 +25,25 @@
   
   <script>
     let response;
-    let score = 75;
-    let machineActive = false;
+    let score = 15;
+    let machineActive = true;
   
     // Add your code here
-
+    if (machineActive === false) {
+      response = 'The machine is turned off. Turn on the machine.';
+    } else if (machineActive === true && score <= 0 || score >= 100) {
+      response = 'This is not possible, an error has occurred';
+    } else if (machineActive === true && score <= 19) {
+      response = 'That score is woeful!';
+    } else if (machineActive === true && score <= 39) {
+      response = 'A bad score, you really need to practice..';
+    } else  if (machineActive === true && score <= 69) {
+      response = 'A passable score, not bad!';
+    } else if (machineActive === true && score <= 89) {
+      response = 'That\'s a fantastic score, you did great!';
+    } else {
+      response = 'That score is AMAZING! Are you for real?!?';
+    }
     // Don't edit the code below here!
 
     const section = document.querySelector('section');
